@@ -14,6 +14,7 @@
         <div id="patient-form" class="hidden">
             <h2>Agregar Paciente</h2>
             <form id="form">
+                <input type="hidden" id="patient-index">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -33,12 +34,30 @@
                     <th>Nombre</th>
                     <th>Edad</th>
                     <th>Condición</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Aquí se agregarán los pacientes -->
             </tbody>
         </table>
+    </div>
+    <br>
+    <div id="edit-patient-form" class="hidden">
+        <h2>Editar Paciente</h2>
+        <form id="edit-form">
+            <label for="edit-name">Nombre:</label>
+            <input type="text" id="edit-name" name="edit-name" required>
+            
+            <label for="edit-age">Edad:</label>
+            <input type="number" id="edit-age" name="edit-age" required>
+            
+            <label for="edit-condition">Condición:</label>
+            <input type="text" id="edit-condition" name="edit-condition" required>
+            
+            <button type="submit">Guardar Cambios</button>
+            <button type="button" id="cancel-edit">Cancelar</button>
+        </form>
     </div>
 
     <script src="Javascript/script.js"></script>
