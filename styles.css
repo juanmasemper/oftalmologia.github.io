@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('/imagen1.jpg') no-repeat center center fixed; /* Ruta a tu imagen */
+    background: url('imagen1.jpg') no-repeat center center fixed; /* Ruta a tu imagen */
     background-size: cover;
     color: #333;
     padding: 20px;
@@ -72,10 +72,15 @@ button:hover {
     border: 1px solid #ccc;
 }
 
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
 table, th, td {
@@ -84,7 +89,7 @@ table, th, td {
 
 th, td {
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .delete-btn, .edit-btn {
@@ -105,4 +110,50 @@ th, td {
 
 .edit-btn:hover {
     background-color: #45a049;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    #patient-form, #edit-patient-form {
+        padding: 15px;
+    }
+
+    #patient-form input, #edit-patient-form input {
+        padding: 6px;
+        font-size: 14px;
+    }
 }
