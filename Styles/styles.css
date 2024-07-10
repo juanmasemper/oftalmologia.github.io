@@ -66,3 +66,15 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
