@@ -1,2 +1,2 @@
-# Oftalmologia.github.io
+# oftalmologia.github.io
 Pagina web de Oftalmología
