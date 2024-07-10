@@ -33,19 +33,19 @@ button:hover {
     display: none;
 }
 
-#patient-form {
+#patient-form, #edit-patient-form {
     background-color: #e6f7ff;
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #0073e6;
 }
 
-#patient-form label {
+#patient-form label, #edit-patient-form label {
     display: block;
     margin-bottom: 5px;
 }
 
-#patient-form input {
+#patient-form input, #edit-patient-form input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -64,10 +64,10 @@ table, th, td {
 
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
-.delete-btn {
+.delete-btn, .edit-btn {
     background-color: #ff4d4d;
     color: white;
     border: none;
@@ -77,4 +77,12 @@ th, td {
 
 .delete-btn:hover {
     background-color: #ff1a1a;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
 }
