@@ -1,10 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('imagen1.jpg') no-repeat center center fixed; /* Ruta a tu imagen */
+    background: url('imagen1.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     padding: 20px;
     position: relative;
+    margin: 0;
 }
 
 body::before {
@@ -19,10 +20,70 @@ body::before {
     z-index: -1;
 }
 
+header {
+    background-color: #9BF6FF;
+    color: #000000;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: #fff;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el contenido */
+    margin: 100px auto 0;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,23 +91,18 @@ body::before {
     z-index: 1;
 }
 
-h1 {
-    text-align: center;
-    color: #0073e6;
-}
-
 button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #0073e6;
-    color: #fff;
+    background-color: #9BF6FF;
+    color: #000000;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #005bb5;
+    background-color: #9BF6FF;
 }
 
 .hidden {
@@ -57,7 +113,7 @@ button:hover {
     background-color: #e6f7ff;
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #0073e6;
+    border: 1px solid #000000;
 }
 
 #patient-form label, #edit-patient-form label {
@@ -70,6 +126,7 @@ button:hover {
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    font-size: 14px;
 }
 
 .table-container {
@@ -89,7 +146,7 @@ table, th, td {
 
 th, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .delete-btn, .edit-btn {
@@ -112,6 +169,24 @@ th, td {
     background-color: #45a049;
 }
 
+footer {
+    background-color: #9BF6FF;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
@@ -127,6 +202,25 @@ th, td {
     table, th, td {
         font-size: 14px;
     }
+
+    #patient-form input, #edit-patient-form input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .header-container, .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -136,7 +230,7 @@ th, td {
     }
 
     h1 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     button {
@@ -153,7 +247,7 @@ th, td {
     }
 
     #patient-form input, #edit-patient-form input {
-        padding: 6px;
-        font-size: 14px;
+        padding: 5px;
+        font-size: 10px;
     }
 }
