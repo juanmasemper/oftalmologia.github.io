@@ -81,7 +81,7 @@ nav ul li a::after {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 100px auto 0;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;

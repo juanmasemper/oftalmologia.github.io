@@ -16,14 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         
         const name = document.getElementById('name').value;
+        const apellido = document.getElementById('apellido').value;
         const age = document.getElementById('age').value;
+        const dni = document.getElementById('dni').value;
+        const celular = document.getElementById('celular').value;
+        const email = document.getElementById('email').value;
         const condition = document.getElementById('condition').value;
 
         const newRow = document.createElement('tr');
         
         newRow.innerHTML = `
             <td>${name}</td>
+            <td>${apellido}</td>
             <td>${age}</td>
+            <td>${dni}</td>
+            <td>${celular}</td>
+            <td>${email}</td>
             <td>${condition}</td>
             <td>
                 <button class="edit-btn">Editar</button>
@@ -41,11 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
         newRow.querySelector('.edit-btn').addEventListener('click', () => {
             const row = newRow;
             const name = row.children[0].textContent;
-            const age = row.children[1].textContent;
-            const condition = row.children[2].textContent;
+            const apellido = row.children[1].textContent;
+            const age = row.children[2].textContent;
+            const dni = row.children[3].textContent;
+            const celular = row.children[4].textContent;
+            const email = row.children[5].textContent;
+            const condition = row.children[6].textContent;
 
             document.getElementById('edit-name').value = name;
+            document.getElementById('edit-apellido').value = apellido;
             document.getElementById('edit-age').value = age;
+            document.getElementById('edit-dni').value = dni;
+            document.getElementById('edit-celular').value = celular;
+            document.getElementById('edit-email').value = email;
             document.getElementById('edit-condition').value = condition;
 
             editingIndex = Array.from(patientsTableBody.children).indexOf(row);
@@ -62,14 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const name = document.getElementById('edit-name').value;
+        const apellido = document.getElementById('edit-apellido').value;
         const age = document.getElementById('edit-age').value;
+        const dni = document.getElementById('edit-dni').value;
+        const celular = document.getElementById('edit-celular').value;
+        const email = document.getElementById('edit-email').value;
         const condition = document.getElementById('edit-condition').value;
 
         if (editingIndex !== null) {
             const row = patientsTableBody.children[editingIndex];
             row.children[0].textContent = name;
-            row.children[1].textContent = age;
-            row.children[2].textContent = condition;
+            row.children[1].textContent = apellido;
+            row.children[2].textContent = age;
+            row.children[3].textContent = dni;
+            row.children[4].textContent = celular;
+            row.children[5].textContent = email;
+            row.children[6].textContent = condition;
 
             editingIndex = null;
         }
@@ -95,11 +119,19 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const row = button.closest('tr');
             const name = row.children[0].textContent;
-            const age = row.children[1].textContent;
-            const condition = row.children[2].textContent;
+            const apellido = row.children[1].textContent;
+            const age = row.children[2].textContent;
+            const dni = row.children[3].textContent;
+            const celular = row.children[4].textContent;
+            const email = row.children[5].textContent;
+            const condition = row.children[6].textContent;
 
             document.getElementById('edit-name').value = name;
+            document.getElementById('edit-apellido').value = apellido;
             document.getElementById('edit-age').value = age;
+            document.getElementById('edit-dni').value = dni;
+            document.getElementById('edit-celular').value = celular;
+            document.getElementById('edit-email').value = email;
             document.getElementById('edit-condition').value = condition;
 
             editingIndex = Array.from(patientsTableBody.children).indexOf(row);

@@ -28,12 +28,24 @@
             <h2>Agregar Paciente</h2>
             <form id="form">
                 <input type="hidden" id="patient-index">
-                <label for="name">Nombre:</label>
+                <label for="name">Nombre/s:</label>
                 <input type="text" id="name" name="name" required>
+
+                <label for="name">Apellido/s:</label>
+                <input type="text" id="apellido" name="apellido" required>
                 
                 <label for="age">Edad:</label>
                 <input type="number" id="age" name="age" required>
                 
+                <label for="name">DNI:</label>
+                <input type="number" id="dni" name="dni" required>
+
+                <label for="name">Celular:</label>
+                <input type="number" id="celular" name="celular" required>
+
+                <label for="name">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
                 <label for="condition">Condición:</label>
                 <input type="text" id="condition" name="condition" required>
                 
@@ -45,8 +57,12 @@
             <table id="patients-table">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
+                        <th>Nombre/s</th>
+                        <th>Apellido/s</th>
                         <th>Edad</th>
+                        <th>DNI</th>
+                        <th>Celular</th>
+                        <th>Correo electrónico</th>
                         <th>Condición</th>
                         <th>Acciones</th>
                     </tr>
@@ -61,14 +77,26 @@
     <div id="edit-patient-form" class="hidden">
         <h2>Editar Paciente</h2>
         <form id="edit-form">
-            <label for="edit-name">Nombre:</label>
-            <input type="text" id="edit-name" name="edit-name" required>
+            <label for="name">Nombre/s:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="name">Apellido/s:</label>
+            <input type="text" id="apellido" name="apellido" required>
             
-            <label for="edit-age">Edad:</label>
-            <input type="number" id="edit-age" name="edit-age" required>
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" required>
             
-            <label for="edit-condition">Condición:</label>
-            <input type="text" id="edit-condition" name="edit-condition" required>
+            <label for="name">DNI:</label>
+            <input type="number" id="dni" name="dni" required>
+
+            <label for="name">Celular:</label>
+            <input type="number" id="celular" name="celular" required>
+
+            <label for="name">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="condition">Condición:</label>
+            <input type="text" id="condition" name="condition" required>
             
             <button type="submit">Guardar Cambios</button>
             <button type="button" id="cancel-edit">Cancelar</button>
